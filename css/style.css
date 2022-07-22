@@ -1,0 +1,167 @@
+/*Обнуление*/
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*:before,*:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+body{
+    font-family: Arial;
+    padding: 30px;
+}
+.wrapper{
+    background: url("../img/bg_repeat.jpg"); opacity: 1;
+    background-attachment: scroll;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+}
+.content{
+    padding: 30px 100px 0 100px;
+    flex: 1 1 auto;
+}
+.container{
+    max-width: 990px;
+    margin: 0 auto;
+}
+h1 {
+    max-width: 300px;
+    font-size: 50px;
+    margin: 0 auto;
+    font-weight: 700;
+}
+
+.addTask{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 40px 0;
+}
+.addTask__input{
+    border: none;
+    width: 50%;
+    font-size: 18px;
+    padding: 10px;
+}
+.addTask__input:focus{
+    box-shadow: 0 0 20px black;
+    border: 2px solid black;
+}
+.addTask__button{
+    background-color: #aaa;
+    border-radius: 12px;
+    box-shadow: 0 5px 0 black;
+    color: #fff;
+    font-weight: 700;
+    border: 2px solid #445162;
+    padding: 10px;
+    margin: 0 0 0 10px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    top: 0;
+    position: relative;
+
+    transition: all 0.5s ease 0s;
+}
+.addTask__button:active {
+    top: 2px;
+    background-color: #555;
+    box-shadow: 0 3px 0 black;
+
+    transition: all 0.1s ease 0s;
+}
+
+input:checked + .task {
+    text-decoration: line-through;
+    background-color: lightgray;
+
+} 
+
+li{
+    min-width: 100%;
+    display: flex;
+    margin: 0 0 10px 0;
+}
+
+.input-li{
+    min-width: 31px;
+    min-height: 31px;
+}
+.task{
+    flex: 1 1 auto;
+    font-size: 20px;
+    line-height: 25px;
+    background-color: #fff;
+    padding: 0 5px;
+    margin: 0 10px;
+}
+.task:hover{
+    background: #111;
+    color: white;
+}
+.delete-btn {
+    min-width: 31px;
+    height: 31px;
+    border-radius: 50px;
+    background-color: transparent;
+    border: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    padding: 3px;
+}
+.delete-btn:hover {
+    background: #333;
+    color: #fff;
+    transition-duration: 1s;
+}
+.todo-wrapper{
+    flex: 1 1 auto;
+}
+.footer {
+    background-color: #445162;
+}
+.footer__row{
+    display: flex;
+    height: 65px;
+    justify-content: center;
+    align-items: center;
+}
+.footer__text {
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
